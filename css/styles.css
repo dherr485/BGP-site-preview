@@ -185,9 +185,3 @@ section {
         margin-bottom: -75px;
     }
 }
-
-/* Optional debugging: red outlines */
-.hero-text,
-.herosub {
-    outline: 2px solid red;
-}
