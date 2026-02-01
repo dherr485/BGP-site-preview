@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Billy G Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxygen+Mono&display=swap" rel="stylesheet">
+
+  <!-- Your Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- NAV (simple for now) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#top">The Billy G Project</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#band">Band</a></li>
+          <li class="nav-item"><a class="nav-link" href="#music">Music</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact/Booking</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <a id="top"></a>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-text text-center">
+        <h1>THE BILLY G PROJECT</h1>
+        <span class="herosub">PROGRESSIVE POP • CLASSIC ROCK • BLUES</span>
+      </div>
+      <img src="img/BGPpicBetter.jpg" class="img-fluid dave mx-auto d-block" alt="The Billy G Project band photo">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="alt" id="about">
+    <div class="container">
+      <div class="row pt-5 pb-5 align-items-center">
+        <div class="col-12 col-lg-4 text-center">
+          <img src="img/BGPpic.jpg" class="img-fluid" alt="BGP photo">
+          <div class="pb-5"></div>
+        </div>
+        <div class="col-12 col-lg-8">
+          <h1>ABOUT US</h1>
+          <p>
+            The Billy G Project is a groove-driven pop, rock, and blues band bringing high-energy
+            performances and deep-pocket rhythms to stages across the Low Country. Born out of
+            Charelston, SC area blues jams, BGP has quickly evolved into a strong, four-piece,
+            four-vocalist band featuring strong original music and funky covers. Built on a
+            foundation of tight musicianship, soulful playing, and four-part harmonies, BGP blends
+            classic influences with a modern edge to create a sound that’s both familiar and fresh.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BAND -->
+  <section class="alt2" id="band">
+    <div class="container">
+      <div class="row pt-5 pb-5">
+        <div class="col-12">
+          <h1>THE BAND</h1>
+
+          <p>
+            Rich Resnick - Keyboards & Vocals • Billy Gadol - Guitar & Vocals •
+            Rob Tucker - Drums & Vocals • Dave Herr - Bass & Vocals
+          </p>
+
+          <img src="img/BGPFrothyPic.jpg" class="img-fluid" alt="Frothy Beard photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIC -->
+  <section class="alt" id="music">
+    <div class="container">
+      <div class="row pt-5 pb-5">
+        <div class="col-12">
+          <h1>MUSIC - THE PROJECT</h1>
+
+          <p>
+            The Billy G Project loves to play! We started by "jamming and hanging" but realized that our adventures
+            needed to become more of a "project". So we started bringing songs to the table from our decades of
+            experience and eclectic tastes to form a gigging band. The result is a fun blend of quality tunes,
+            ranging from sing-alongs to deep listening. We'd love to hang with you as well, whether it's
+            at area clubs, restaurants, parties, or jams! Stay tuned for our show announcements and schedule.
+          </p>
+
+          <p>
+            More content coming soon!
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contactForm" id="contact">
+    <div class="pb-5"></div>
+    <div class="container">
+      <h1>Contact & Booking</h1>
+      <div class="pb-3"></div>
+
+      <form action="https://formspree.io/f/meealwrg" method="POST">
+        <div class="row">
+
+          <div class="col-12 col-lg-4 mb-3">
+            <label class="form-label">Name:</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+
+          <div class="col-12 col-lg-4 mb-3">
+            <label class="form-label">Email:</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="col-12 col-lg-4 mb-3">
+            <label class="form-label">Phone:</label>
+            <input type="text" name="phone" class="form-control">
+          </div>
+
+          <div class="col-12 mb-3">
+            <label class="form-label">Message:</label>
+            <textarea name="message" rows="4" class="form-control" required></textarea>
+          </div>
+
+          <div class="col-12 mb-3">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+    <div class="pb-5"></div>
+  </section>
+
+  <footer class="border-top footer text-muted py-3">
+    <div class="container text-center">
+      &copy; 2026 - The Billy G Project
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your JS -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
