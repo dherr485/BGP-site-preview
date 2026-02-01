@@ -1,8 +1,16 @@
+/* ===========================
+   Base Styles
+   =========================== */
 html {
     font-size: 14px;
     background-color: #151515;
     position: relative;
     min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #151515;
 }
 
 h1 {
@@ -12,32 +20,29 @@ h1 {
 
 .hero {
     overflow: hidden;
-    position: relative;   /* ADD THIS */
+    position: relative;
     padding-top: 0;
     margin-top: 0;
 }
 
 .dave {
-    margin-top: 0;   /* REMOVE the artificial gap */
+    margin-top: 0;
 }
 
 .hero-text {
     position: absolute;
     z-index: 2;
-    top: 80px;
-    left: 25px;
-    transform: translateX(2rem);
+    color: #d3f526;
+    text-align: left;
 }
 
 .herosub {
     color: #34e2d6;
     font-family: 'Oxygen Mono', monospace;
-    font-size: 15pt;
 }
 
 .hero h1 {
     color: #d3f526;
-    font-size: 50pt;
     margin-bottom: -20px;
 }
 
@@ -59,135 +64,19 @@ h1 {
     border-color: #0d6efd;
 }
 
-@media (min-width: 390px) {
-    .hero-text {
-        top: 190px;
-        /* was 260px */
-        left: 25px;
-    }
+section {
+    scroll-margin-top: 80px;
 }
 
-@media (min-width: 768px) {
-    .hero-text {
-        top: 210px;   /* moved up */
-        left: 40px;
-    }
-
-    .hero h1 {
-        font-size: 70pt;
-        margin-bottom: -30px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero {
-        background-image: url("../img/dherrbg.webp");
-        height: 840px;
-    }
-
-.hero-text {
-    top: 130px;   /* was 200px */
-    left: 50px;
-}
-
-    .herosub {
-        font-size: 16pt;
-        float: right;
-    }
-
-    .hero h1 {
-        font-size: 110pt;
-        margin-bottom: -45px;
-    }
-}
+/* ===========================
+   Hero Text & Subtext Positions
+   =========================== */
 
 /* Mobile default */
 .hero-text {
-  transform: translate(2rem, 160px);
-}
-
-/* Tablets and up */
-@media (min-width: 768px) {
-  .hero-text {
-    transform: translate(4rem, 260px);
-  }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .hero-text {
-    transform: translate(5rem, 360px);
-  }
-}
-
-@media (min-width: 1280px) {
-    html {
-        font-size: 18px;
-    }
-
-    .dave {
-        right: 0px;
-    }
-}
-
-@media (min-width: 1440px) {
-.hero-text {
-    top: 130px;   /* was 200px */
-    left: 150px;
-}
-
-    .herosub {
-        font-size: 20pt;
-        float: right;
-    }
-
-    .hero h1 {
-        font-size: 138pt;
-        margin-bottom: -55px;
-    }
-}
-
-@media (min-width: 1920px) {
-    .dave {
-        right: 0px;
-        height: 1020px;
-    }
-
-    .hero {
-        height: 1020px;
-    }
-
-/* .hero-text {
-    top: 130px;
-    left: 250px;
-} */
-
-/* Base styling for all screens */
-.hero-text {
-    position: absolute;
-    z-index: 2;
-    top: 50px;       /* small screen starting point */
-    left: 20px;
-    right: 20px;     /* ensures it doesn’t overflow */
-    text-align: center;
-    transform: none; /* remove the big translate */
-    color: #d3f526;
-}
-
-/* Very small screens (~iPhone SE) */
-@media (min-width: 320px) {
-    .hero-text {
-        top: 60px;
-        font-size: 1.5rem;
-    }
-}
-
-/* Small phones (~iPhone 8, 11, 12 mini) */
-@media (min-width: 390px) {
-    .hero-text {
-        top: 80px;
-        font-size: 1.8rem;
-    }
+    top: 80px;
+    left: 25px;
+    font-size: 1.5rem;
 }
 
 /* Tablets & small desktops */
@@ -198,14 +87,34 @@ h1 {
         font-size: 2.5rem;
         text-align: left;
     }
+
+    .hero h1 {
+        font-size: 70pt;
+        margin-bottom: -30px;
+    }
+
+    .herosub {
+        font-size: 16pt;
+        float: right;
+    }
 }
 
 /* Desktops 1024px+ */
 @media (min-width: 1024px) {
+    .hero {
+        background-image: url("../img/dherrbg.webp");
+        height: 840px;
+    }
+
     .hero-text {
         top: 200px;
         left: 50px;
         font-size: 4rem;
+    }
+
+    .hero h1 {
+        font-size: 110pt;
+        margin-bottom: -45px;
     }
 }
 
@@ -216,101 +125,71 @@ h1 {
         left: 150px;
         font-size: 5rem;
     }
+
+    .hero h1 {
+        font-size: 138pt;
+        margin-bottom: -55px;
+    }
+
+    .herosub {
+        font-size: 20pt;
+    }
 }
 
 /* Ultra-wide screens 1920px+ */
 @media (min-width: 1920px) {
+    .dave {
+        right: 0px;
+        height: 1020px;
+    }
+
+    .hero {
+        height: 1020px;
+    }
+
     .hero-text {
         top: 200px;
         left: 250px;
         font-size: 6rem;
-    }
-}
-
-    .herosub {
-        font-size: 29pt;
-        float: right;
     }
 
     .hero h1 {
         font-size: 200pt;
         margin-bottom: -75px;
     }
-}
 
-body {
-    margin-bottom: 60px;
-    background-color: #151515;
-}
-
-/* .hero-text {
-    transform: translate(5rem, 360px) !important;
-} */
-
-
-section {
-  scroll-margin-top: 80px;
-}
-
-@media (max-width: 768px) {
-  .hero-text {
-    transform: translate(0, 160px) !important;
-  }
-}
-/* Force hero text to be visible on all small screens */
-@media (max-width: 767px) {
-    .hero-text {
-        transform: translate(5rem, 360px) !important;
-        top: auto !important;
-        left: 0 !important;
-        text-align: center !important;
+    .herosub {
+        font-size: 29pt;
     }
 }
 
-.hero-text,
-.herosub {
-  outline: 2px solid red;
-}
-
-@media (max-width: 767px) {
-  .hero-text {
-    position: absolute !important;
-    top: 100px !important;
-    left: 20px !important;
-    transform: none !important;
-    color: red !important;
-    outline: 2px solid red !important;
-    z-index: 9999 !important;
-  }
-}
-
 /* ===========================
-   Mobile Hero Text Fix (iPhone / small phones)
+   Mobile Hero Fix (iPhone / small phones)
    =========================== */
 @media (max-width: 767px) {
-  .hero-text {
-    position: absolute !important;
-    top: 100px !important;        /* move down a bit so it doesn’t block image */
-    left: 15px !important;        /* margin from edges */
-    right: 15px !important;       /* prevent overflow */
-    text-align: center !important;
-    font-size: 1.6rem !important; /* smaller text on phones */
-    transform: none !important;   /* cancel previous big translate */
-    z-index: 9999 !important;     /* ensure text is above photo */
-    color: #d3f526 !important;    /* your chosen color */
-  }
+    .hero-text {
+        position: absolute !important;
+        top: 100px !important;
+        left: 15px !important;
+        right: 15px !important;
+        text-align: center !important;
+        font-size: 1.6rem !important;
+        transform: none !important;
+        z-index: 9999 !important;
+        color: #d3f526 !important;
+    }
 
-  .herosub {
-    font-size: 1rem !important;
-    display: block;
-    text-align: center !important;
-    margin-top: 0.5rem;
-    color: #34e2d6 !important;    /* your chosen subtext color */
-  }
+    .herosub {
+        font-size: 1rem !important;
+        display: block;
+        text-align: center !important;
+        margin-top: 0.5rem;
+        color: #34e2d6 !important;
+    }
 
-  /* Optional outline for debugging — remove when happy */
-  .hero-text,
-  .herosub {
-    outline: 1px solid red !important;
-  }
+    /* Optional red outlines for debugging */
+    .hero-text,
+    .herosub {
+        outline: 1px solid red !important;
+    }
 }
