@@ -1,6 +1,4 @@
-/* ===========================
-   BASE STYLES
-=========================== */
+/* ---------------------- Base Styles ---------------------- */
 html {
     font-size: 14px;
     background-color: #151515;
@@ -18,9 +16,7 @@ h1 {
     color: #1cbbb4;
 }
 
-/* ===========================
-   HERO SECTION
-=========================== */
+/* ---------------------- Hero Section ---------------------- */
 .hero {
     overflow: hidden;
     position: relative;
@@ -29,22 +25,18 @@ h1 {
 }
 
 .dave {
-    margin-top: 0;
-}
-
-.hero h1 {
-    color: #d3f526;
-    font-size: 50pt;
-    margin-bottom: -20px;
+    margin-top: 0;   /* Remove artificial gap */
 }
 
 .hero-text {
     position: absolute;
     z-index: 2;
-    top: 80px;
-    left: 25px;
-    transform: translateX(2rem);
+    top: 60px;       /* Mobile starting point */
+    left: 20px;
+    right: 20px;
+    text-align: center;
     color: #d3f526;
+    font-size: 1.8rem;
 }
 
 .herosub {
@@ -53,9 +45,14 @@ h1 {
     font-size: 15pt;
 }
 
-/* ===========================
-   SECTIONS
-=========================== */
+/* Hero headline colors and spacing */
+.hero h1 {
+    color: #d3f526;
+    font-size: 50pt;
+    margin-bottom: -20px;
+}
+
+/* ---------------------- Section Backgrounds ---------------------- */
 .alt {
     background-color: #f9f9f9;
 }
@@ -74,69 +71,40 @@ h1 {
     border-color: #0d6efd;
 }
 
+/* ---------------------- Scroll Margin ---------------------- */
 section {
     scroll-margin-top: 80px;
 }
 
-/* ===========================
-   MEDIA QUERIES
-=========================== */
+/* ---------------------- Responsive Hero Text ---------------------- */
 
-/* Small phones (~iPhone 8, 11, 12 mini) */
+/* Mobile / small screens (iPhone) */
 @media (max-width: 767px) {
     .hero-text {
-        font-size: 1.2rem !important;
-        top: 80px !important;
-        left: 15px !important;
-        right: 15px !important;
-        text-align: center !important;
-        transform: none !important;
-        z-index: 9999 !important;
-        color: #d3f526 !important;
+        top: 60px;
+        left: 10px;
+        right: 10px;
+        font-size: 1.8rem;
+        transform: none;
+        text-align: center;
     }
 
     .herosub {
-        font-size: 0.9rem !important;
+        font-size: 1rem;
+        float: none;
         display: block;
-        text-align: center !important;
-        margin-top: 0.3rem;
-        color: #34e2d6 !important;
+        text-align: center;
     }
 }
 
-/* Medium phones */
-@media (min-width: 390px) and (max-width: 767px) {
-    .hero-text {
-        font-size: 1.3rem !important;
-    }
-}
-
-/* Tablets & small desktops */
+/* Tablet / small desktop */
 @media (min-width: 768px) {
     .hero-text {
-        top: 150px;
+        top: 150px;              /* ~3 inches down */
         left: 40px;
         font-size: 2.5rem;
         text-align: left;
-    }
-
-    .hero h1 {
-        font-size: 70pt;
-        margin-bottom: -30px;
-    }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-    .hero {
-        background-image: url("../img/dherrbg.webp");
-        height: 840px;
-    }
-
-    .hero-text {
-        top: 200px;
-        left: 50px;
-        font-size: 4rem;
+        transform: none;
     }
 
     .herosub {
@@ -145,12 +113,36 @@ section {
     }
 
     .hero h1 {
-        font-size: 110pt;
-        margin-bottom: -45px;
+        font-size: 70pt;
+        margin-bottom: -30px;
     }
 }
 
-/* Large desktops */
+/* Desktop 1024px+ */
+@media (min-width: 1024px) {
+    .hero {
+        background-image: url("../img/dherrbg.webp");
+        height: 840px;
+    }
+
+    .hero-text {
+        top: 180px;
+        left: 50px;
+        font-size: 4rem;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 110pt;
+        margin-bottom: -45px;
+    }
+
+    .herosub {
+        font-size: 16pt;
+    }
+}
+
+/* Large desktop 1440px+ */
 @media (min-width: 1440px) {
     .hero-text {
         top: 200px;
@@ -158,17 +150,17 @@ section {
         font-size: 5rem;
     }
 
-    .herosub {
-        font-size: 20pt;
-    }
-
     .hero h1 {
         font-size: 138pt;
         margin-bottom: -55px;
     }
+
+    .herosub {
+        font-size: 20pt;
+    }
 }
 
-/* Ultra-wide screens */
+/* Ultra-wide screens 1920px+ */
 @media (min-width: 1920px) {
     .hero-text {
         top: 200px;
@@ -176,12 +168,34 @@ section {
         font-size: 6rem;
     }
 
-    .herosub {
-        font-size: 29pt;
-    }
-
     .hero h1 {
         font-size: 200pt;
         margin-bottom: -75px;
     }
+
+    .herosub {
+        font-size: 29pt;
+    }
+
+    .dave {
+        right: 0px;
+        height: 1020px;
+    }
+
+    .hero {
+        height: 1020px;
+    }
 }
+
+/* ---------------------- Font size adjustment for large screens ---------------------- */
+@media (min-width: 1280px) {
+    html {
+        font-size: 18px;
+    }
+
+    .dave {
+        right: 0px;
+    }
+}
+
+/* ---------------------- End of Hero Section ---------------------- */
