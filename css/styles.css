@@ -283,3 +283,34 @@ section {
     z-index: 9999 !important;
   }
 }
+
+/* ===========================
+   Mobile Hero Text Fix (iPhone / small phones)
+   =========================== */
+@media (max-width: 767px) {
+  .hero-text {
+    position: absolute !important;
+    top: 100px !important;        /* move down a bit so it doesn’t block image */
+    left: 15px !important;        /* margin from edges */
+    right: 15px !important;       /* prevent overflow */
+    text-align: center !important;
+    font-size: 1.6rem !important; /* smaller text on phones */
+    transform: none !important;   /* cancel previous big translate */
+    z-index: 9999 !important;     /* ensure text is above photo */
+    color: #d3f526 !important;    /* your chosen color */
+  }
+
+  .herosub {
+    font-size: 1rem !important;
+    display: block;
+    text-align: center !important;
+    margin-top: 0.5rem;
+    color: #34e2d6 !important;    /* your chosen subtext color */
+  }
+
+  /* Optional outline for debugging — remove when happy */
+  .hero-text,
+  .herosub {
+    outline: 1px solid red !important;
+  }
+}
