@@ -271,3 +271,15 @@ section {
 .herosub {
   outline: 2px solid red;
 }
+
+@media (max-width: 767px) {
+  .hero-text {
+    position: absolute !important;
+    top: 100px !important;
+    left: 20px !important;
+    transform: none !important;
+    color: red !important;
+    outline: 2px solid red !important;
+    z-index: 9999 !important;
+  }
+}
