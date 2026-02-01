@@ -267,3 +267,7 @@ section {
     }
 }
 
+.hero-text,
+.herosub {
+  outline: 2px solid red;
+}
