@@ -80,7 +80,7 @@ section {
 
 @media (max-width: 767px) {
     .hero-text {
-        top: 15vh;        /* drops text ~15% of screen height */
+        top: 12vh;        /* drops text ~12% of screen height */
         left: 10px;
         right: 10px;
         font-size: 1.8rem;
