@@ -78,16 +78,16 @@ section {
 
 /* ---------------------- Responsive Hero Text ---------------------- */
 
-/* Mobile / small screens (iPhone) */
 @media (max-width: 767px) {
     .hero-text {
-        top: 60px;
+        top: 10vh;        /* drops text ~10% of screen height */
         left: 10px;
         right: 10px;
         font-size: 1.8rem;
         transform: none;
         text-align: center;
     }
+}
 
     .herosub {
         font-size: 1rem;
