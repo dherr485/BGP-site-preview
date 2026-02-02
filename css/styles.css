@@ -78,24 +78,24 @@ section {
 
 /* ---------------------- Responsive Hero Text ---------------------- */
 
-/* @media (max-width: 767px) {
-    .hero-text { */
-        /*top: 12vh;         drops text ~12% of screen height */
-        /* left: 10px;
+@media (max-width: 767px) {
+    .hero-text {
+        top: 12vh;
+        left: 10px;
         right: 10px;
         font-size: 1.8rem;
         transform: none;
         text-align: center;
     }
-} */
+}
 
-    /* .herosub {
+    .herosub {
         font-size: 1rem;
         float: none;
         display: block;
         text-align: center;
     }
-} */
+}
 
 /* Tablet / small desktop */
 @media (min-width: 768px) {
