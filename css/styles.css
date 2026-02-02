@@ -117,3 +117,20 @@ section {
     font-size: 18px;
   }
 }
+
+/* Music section Linktree button styling */
+.music-links {
+  margin-top: 1.5rem;
+}
+
+.music-links .btn-primary {
+  background-color: #1cbbb4;
+  border-color: #0d6efd;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+}
+
+.music-links .btn-primary:hover {
+  background-color: #34e2d6;
+  border-color: #0d6efd;
+}
